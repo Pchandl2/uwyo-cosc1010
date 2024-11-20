@@ -1,0 +1,24 @@
+# Peyton Chandler
+# UWYO COSC 1010
+# 11/19/24
+# HW 5
+# Lab Section: 11
+# Sources, people worked with, help given to: Emmanuel Ta, ChatGPT to debug my code
+# Chat-GPT (2024, Novebber) can you help me figure out why my code doesn't work? " copy and pasted code" https://chat.openai.com/
+# your
+# comments
+# here
+
+
+import openpyxl
+from openpyxl.styles import Color, PatternFill
+from pathlib import Path
+
+file_path = Target_Pixel_Art.xlsx
+if not Path(file_path).is_file():
+    wb = openpyxl.Workbook()
+    wb.save(file_path)
+else:
+    wb = openpyxl.load_workbook(file_path)
+
+ws = wb.active
